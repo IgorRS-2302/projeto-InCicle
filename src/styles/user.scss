@@ -7,7 +7,7 @@
     width: 22%;
     height: 60vh;
     background: linear-gradient(to bottom, #3E838A 35%, #FFFFFF 35%);
-    margin: 2% 0 0 2%;
+    margin: -15% 0 0 2%;
     border-radius: 3%;
 
     h1 {
@@ -28,6 +28,10 @@
     }
 
     .bordaPerfil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         width: 22vh;
         height: 22vh;
         background: #0B3D59;
@@ -41,8 +45,6 @@
         height: 20vh;
         background: #FFFFFF;
         border-radius: 50%;
-        margin-top: 5%;
-        margin-left: 5%;
 
         img {
             max-width: 100%;

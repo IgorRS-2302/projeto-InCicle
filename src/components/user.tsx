@@ -1,8 +1,8 @@
 import '../styles/user.scss'
 import IgorPerfil from '../assets/images/igorPerfil.jpeg'
-import PinDropIcon from '@material-ui/icons/PinDrop'
-import WorkIcon from '@material-ui/icons/Work'
-import SchoolIcon from '@material-ui/icons/School'
+import {HiLocationMarker} from 'react-icons/hi'
+import {MdWork} from 'react-icons/md'
+import {IoMdSchool} from 'react-icons/io'
 
 export function Usuario() {
     return (
@@ -17,13 +17,13 @@ export function Usuario() {
             <h3>Front-End Developer</h3>
             <div className="informacoes">
                 <div>
-                <PinDropIcon/>
+                 <HiLocationMarker />
                 <p>Recife/Pernambuco - Brasil</p>
                 </div>
                 <div>
-                <WorkIcon/>
+                 <MdWork />
                 <p>InCicle</p>
-                <SchoolIcon/>
+                 <IoMdSchool />
                 <p>IFPE - Recife</p>
                 </div>
             </div>
