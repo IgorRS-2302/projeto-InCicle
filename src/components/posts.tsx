@@ -1,8 +1,9 @@
 import {FaEdit} from 'react-icons/fa'
 import {IoMdPhotos} from 'react-icons/io'
 import {IoMdVideocam} from 'react-icons/io'
-import { Publicacoes } from './publicados'
 import { MdPublic, MdLock } from 'react-icons/md'
+
+import { Publicacoes } from './publicados'
 
 import '../styles/posts.scss'
 
@@ -20,8 +21,8 @@ export function Posts() {
                     <p>ou <strong>publique um artigo</strong> na InCicle</p>
                 </div>
             </div>
-            <Publicacoes text="Há cerca de 8 horas" icon={MdLock} visibility="Somente eu"/>
-            <Publicacoes text="Há 8 dias" icon={MdPublic} visibility="Público"/>
+            <Publicacoes time="Há cerca de 8 horas" icon={MdLock} visibility="Somente eu" text='Essa mensagem está configurada no modo privado "somente eu"' />
+            <Publicacoes time="Há 8 dias" icon={MdPublic} visibility="Público" text="Minha primeira publicação" />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import { Posts } from "./components/posts";
 import { Usuario } from "./components/user";
+import { Addons } from "./components/addons";
 
 import '../src/styles/app.scss'
 
@@ -8,6 +9,7 @@ function App() {
     <div className="app">
       <Usuario />
       <Posts />
+      <Addons />
     </div>
     );
 }
