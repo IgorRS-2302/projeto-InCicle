@@ -1,9 +1,9 @@
 import { IconType } from 'react-icons/lib'
 import {MdTimer, MdKeyboardArrowDown} from 'react-icons/md'
-import {AiOutlineLike, AiOutlineComment, AiOutlineShareAlt} from 'react-icons/ai'
+import {AiOutlineLike, AiFillLike, AiOutlineComment, AiOutlineShareAlt} from 'react-icons/ai'
 
-import { Button } from './button'
 import IgorPerfil from '../assets/images/igorPerfil.jpeg'
+import { useState } from 'react'
 
 import '../styles/publicados.scss'
 
@@ -15,6 +15,17 @@ interface PublicacoesProps {
 }
 
 export function Publicacoes({text, time, visibility, icon: Icon}:PublicacoesProps) {
+    
+    const [like, setLike] = useState(false)
+    const [comment, setComment] = useState(0)
+    const [share, setShare] = useState(0)
+
+
+    function handleLike() {
+        setLike(!like)
+        console.log(like)
+    }
+
     return (
         <div className="publicacao">
             <div className="fotoMiniatura">
@@ -42,17 +53,20 @@ export function Publicacoes({text, time, visibility, icon: Icon}:PublicacoesProp
             <div className="metricas">
                 <div className="likes">
                     <AiOutlineLike />
-                    <p>Seja o primeiro a curtir</p>
+                    <p>{like ? '1 pessoa curtiu' : 'Seja o primeiro a curtir'}</p>
                 </div>
                 <div className="comentarios">
-                    <p>0 comentários</p>
-                    <p>0 compartilhamentos</p>
+                    <p>{comment} comentários</p>
+                    <p>{share} compartilhamentos</p>
                 </div>
             </div>
             <div className="botoes">
-                <Button ><AiOutlineLike />Curtir</Button>
-                <Button ><AiOutlineComment />Comentários</Button>
-                <Button ><AiOutlineShareAlt />Compartilhar</Button>
+                <button onClick={handleLike}>
+                    {like ? <AiFillLike /> : <AiOutlineLike />}
+                    {like ? 'Curtiu' : 'Curtir'}
+                </button>
+                <button onClick={() => {setComment(comment + 1)}}><AiOutlineComment />Comentários</button>
+                <button onClick={() => {setShare(share + 1)}}><AiOutlineShareAlt />Compartilhar</button>
             </div>
         </div>
     )

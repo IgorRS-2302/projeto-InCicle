@@ -112,5 +112,26 @@
         margin-top: 1%;
         gap: 3%;
 
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        
+            height: 90%;
+            width: 13vw;
+            background: #F2F3F5;
+            border: none;
+            border-radius: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        
+        button:hover {background-color: #e6e7e8}
+        
+        button:active {
+            background-color: #e6e7e8;
+            transform: translateY(0.5px);
+          }
     }
 }
