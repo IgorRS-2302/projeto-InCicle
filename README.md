@@ -8,7 +8,7 @@ React é um framework muito completo, traz uma série de bibliotecas que ajudam 
 
 ### Tela Finalizada
 
-![Web 1](https://github.com/acferlucas/Projeto-Vagalume/blob/master/src/assets/images/TelaFinalizada.png)
+![Web 1](https://github.com/IgorRS-2302/projeto-InCicle/blob/master/src/assets/images/TelaFinalizada.png)
 
 # Tecnologias Utilizadas
 ## Front end
